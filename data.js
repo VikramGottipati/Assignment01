@@ -93,7 +93,6 @@ console.log(cart)
 display.addEventListener("click", (event) => {
     const productId = parseInt(event.target.getAttribute("data-id"));
     addToCart(productId);
-
   });
 let displayCart = document.getElementById("display-cart");
 // console.log(displayCart)
@@ -114,8 +113,6 @@ function renderCart() {
   displayCart.innerHTML = s;
 //   renderCart();
 }
-
-
 
 renderProducts(products);
 
