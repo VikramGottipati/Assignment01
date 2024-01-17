@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+      nav {
+        background-color: rgb(213, 225, 225);
+        height: 50px;
+      }
+      #logo {
+        margin-left: 100px;
+        font-size: 25px;
+      }
+      nav div {
+        display: inline-block;
+      }
+      #menu {
+        margin-left: 800px;
+      }
+      #menu ul li {
+        display: inline-block;
+        margin-left: 50px;
+      }
+      #menu ul li a {
+        text-transform: capitalize;
+        text-decoration: none;
+      }
+      #menu ul li a:hover {
+        border-bottom: 2px solid orange;
+      }
+      #display {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .container {
+        margin: 10px 15px 100px 10px;
+        height: 300px;
+        width: 300px;
+      }
+      .content {
+        display: flex;
+        justify-content: space-around;
+      }
+      button {
+        background-color: rgb(213, 225, 225);;
+        margin-top: 25px;
+        border: 1px solid rgb(213, 225, 225);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      h1 {
+        text-align: center;
+      }
+      .footer {
+        background-color: rgb(213, 225, 225);
+        text-align: center;
+      }
+      .cart{
+        display: flex;
+        justify-content: space-between;
+      }.clear{
+        margin-left: 20px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <nav>
+        <div id="logo">Shopping Cart</div>
+        <div id="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#cart">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="display"></div>
+      <hr />
+      <div class="cart">
+        <div>
+          <input type="text" placeholder="Enter a price" />
+        </div>
+        <div>
+          <select name="" id="">
+            <option value="">sort by</option>
+            <option value="">price</option>
+            <option value="">name</option>
+          </select>
+          <span class="clear">Clear Cart X</span>
+        </div>
+    </div>
+    <h1 id="cart">Cart</h1>
+    <div id="display-cart"></div>
+      <hr />
+      <h1>Cart Summary</h1>
+      <div class="cart">
+        <h3>Average Product Price</h3>
+        <h3 id="average">0</h3>
+      </div>
+      <hr />
+      <div class="cart">
+        <h3>Total</h3>
+        <h3>0</h3>
+      </div>
+      <div class="footer">
+        <a href="#top">Back to Top</a>
+      </div>
+    </div>
+<button onclick="addToCart()"></button>
+    <script src="./data.js" ></script>
+  </body>
+</html>
